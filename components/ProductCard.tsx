@@ -1,20 +1,15 @@
-"use client";
-
 import Link from 'next/link';
 import { FaStar } from 'react-icons/fa';
 import { ProductCardI } from '@/app/types';
 
-
-
-
-export default function ProductCard({ product }: ProductCardI) {
-  const { id, name, category, price, image, rating, inStock } = product;
+export default function ProductCard(pro: ProductCardI) {
+  const { id, name, category, price, image, rating, inStock } = pro;
 
   return (
     <div className="group bg-white rounded-2xl overflow-hidden border border-brand-primary/5 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
       
- 
-      <div className="relative aspect-4/5 bg-brand-bg/50 overflow-hidden w-full">
+      
+      <Link href={`/products/${id}`} className="block relative aspect-4/5 bg-brand-bg/50 overflow-hidden w-full">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={image}
@@ -22,41 +17,37 @@ export default function ProductCard({ product }: ProductCardI) {
           className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
         />
         
-     
-        <span className="absolute top-3 left-3 bg-brand-primary/90 backdrop-blur-xs text-brand-secondary text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
+        <span className="absolute top-3 left-3 bg-brand-primary/90 backdrop-blur-xs text-brand-secondary text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md z-10">
           {category}
         </span>
 
-    
         {!inStock && (
-          <div className="absolute inset-0 bg-brand-dark/60 backdrop-blur-xs flex items-center justify-center">
+          <div className="absolute inset-0 bg-brand-dark/60 backdrop-blur-xs flex items-center justify-center z-10">
             <span className="bg-red-600 text-white text-xs font-extrabold uppercase tracking-widest px-4 py-2 rounded-lg shadow-lg">
               Out of Stock
             </span>
           </div>
         )}
-      </div>
-
+      </Link>
 
       <div className="p-5 flex flex-col grow">
         
-     
         <div className="flex items-center gap-1 mb-2">
           <FaStar className="text-yellow-500 text-sm" />
           <span className="text-xs font-bold text-brand-dark/70">{rating.toFixed(1)}</span>
         </div>
 
-
-        <h3 className="text-base font-bold text-brand-dark group-hover:text-brand-primary transition-colors line-clamp-1 mb-1">
-          {name}
-        </h3>
-
+       
+        <Link href={`/products/${id}`}>
+          <h3 className="text-base font-bold text-brand-dark group-hover:text-brand-primary transition-colors line-clamp-1 mb-1 cursor-pointer">
+            {name}
+          </h3>
+        </Link>
 
         <p className="text-lg font-black text-brand-primary mb-4">
           ৳{price.toLocaleString()}
         </p>
 
- 
         <div className="mt-auto">
           {inStock ? (
             <Link

@@ -1,6 +1,5 @@
 
 
-
 import productsData from '@/data/products.json';
 
 import MyContainer from '@/components/global/shared/MyContainer';
@@ -22,16 +21,11 @@ export default function ProductsPage() {
           </p>
         </div>
 
-       
-
-        
-    
-
-        
+      
         {productsData.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {productsData.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard key={product.id} {...product} />
             ))}
           </div>
         ) : (

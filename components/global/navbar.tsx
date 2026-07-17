@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -7,7 +7,7 @@ import { HiMenu, HiX } from 'react-icons/hi';
 import Logo from './shared/logo';
 import MyContainer from './shared/MyContainer';
 
-export default function Navbar(): React.JSX.Element {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   
   const cartCount: number = 3; 
