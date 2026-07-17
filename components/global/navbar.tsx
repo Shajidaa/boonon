@@ -6,11 +6,14 @@ import { FiShoppingCart } from 'react-icons/fi';
 import { HiMenu, HiX } from 'react-icons/hi';
 import Logo from './shared/logo';
 import MyContainer from './shared/MyContainer';
+import { useCart } from '@/hook/useCart';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  
-  const cartCount: number = 3; 
+  const {cartCount}=useCart()
+
+  // const cartCount =count  as number
+console.log(cartCount);
 
   return (
     <nav className="bg-brand-primary text-brand-bg sticky top-0 z-50 shadow-md">

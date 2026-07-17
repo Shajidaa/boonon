@@ -2,25 +2,41 @@
 
 
 import { ProductActionsProps } from '@/app/types';
+import { useCart } from '@/hook/useCart';
 
-import React, { useState } from 'react';
+
+import { useState } from 'react';
 import { FiShoppingBag, FiCheck } from 'react-icons/fi';
-import { useDispatch } from 'react-redux';
+
 
 
 export default function ProductActions({
   sizes = [],
   colors = [],
   inStock,
-productId, productName, productPrice
+productId 
+, productName,
+ productPrice
 }: ProductActionsProps) {
-const dispatch = useDispatch();
+ const { addToCart } = useCart();
   const [selectedSize, setSelectedSize] = useState<string>(sizes?.[0] || '');
   const [selectedColor, setSelectedColor] = useState<string>(colors?.[0] || '');
   const [isAdded, setIsAdded] = useState<boolean>(false);
 
   const handleAddToCart = () => {
+ addToCart({
+           productId: String(productId),
+      name: productName,
+      price: productPrice,
+      size: selectedSize || 'N/A',
+      color: selectedColor || 'N/A',
+    });
 
+ 
+    setIsAdded(true);
+    setTimeout(() => {
+      setIsAdded(false);
+    }, 2000);
   };
 
   return (
