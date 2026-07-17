@@ -16,7 +16,8 @@ export default function ProductActions({
   inStock,
 productId 
 , productName,
- productPrice
+ productPrice,
+
 }: ProductActionsProps) {
  const { addToCart } = useCart();
   const [selectedSize, setSelectedSize] = useState<string>(sizes?.[0] || '');
@@ -28,6 +29,7 @@ productId
            productId: String(productId),
       name: productName,
       price: productPrice,
+     
       size: selectedSize || 'N/A',
       color: selectedColor || 'N/A',
     });
