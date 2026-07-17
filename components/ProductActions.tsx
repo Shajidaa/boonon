@@ -1,39 +1,31 @@
 "use client";
 
+
 import { ProductActionsProps } from '@/app/types';
+
 import React, { useState } from 'react';
 import { FiShoppingBag, FiCheck } from 'react-icons/fi';
+import { useDispatch } from 'react-redux';
 
 
 export default function ProductActions({
   sizes = [],
   colors = [],
   inStock,
-  productId,
-  productName,
-  productPrice,
+productId, productName, productPrice
 }: ProductActionsProps) {
-
-  const [selectedSize, setSelectedSize] = useState<string>(sizes?.[0] );
-  const [selectedColor, setSelectedColor] = useState<string>(colors?.[0] );
+const dispatch = useDispatch();
+  const [selectedSize, setSelectedSize] = useState<string>(sizes?.[0] || '');
+  const [selectedColor, setSelectedColor] = useState<string>(colors?.[0] || '');
   const [isAdded, setIsAdded] = useState<boolean>(false);
 
   const handleAddToCart = () => {
-    
 
-    console.log("Added to Cart:", {
-      id: productId,
-      name: productName,
-      price: productPrice,
-      size: selectedSize,
-      color: selectedColor,
-      quantity: 1
-    });
   };
 
   return (
     <div className="space-y-6">
-      {/* Dynamic Size Picker with Safety Fallbacks */}
+    
       {sizes && sizes.length > 0 && sizes[0] !== 'Free Size' && sizes[0] !== 'One Size' && (
         <div className="space-y-3">
           <span className="text-sm font-bold text-brand-dark">Select Size:</span>
@@ -55,7 +47,6 @@ export default function ProductActions({
         </div>
       )}
 
-      {/* Dynamic Color Picker with Safety Fallbacks */}
       {colors && colors.length > 0 && colors[0] !== 'One Size' && (
         <div className="space-y-3">
           <span className="text-sm font-bold text-brand-dark">Select Color:</span>
@@ -77,7 +68,7 @@ export default function ProductActions({
         </div>
       )}
 
-      {/* Interactive Cart Button */}
+
       <div className="pt-4">
         {inStock ? (
           <button
