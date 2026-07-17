@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Cotton Panjabi",
+    "category": "Panjabi",
+    "price": 1490,
+    "image": "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.5,
+    "colors": ["White", "Navy", "Black"],
+    "sizes": ["M", "L", "XL"],
+    "inStock": true,
+    "description": "Premium quality cotton Panjabi with minimalist embroidery, perfect for festive occasions and casual wear."
+  },
+  {
+    "id": 2,
+    "name": "Royal Silk Katan Saree",
+    "category": "Saree",
+    "price": 4500,
+    "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.8,
+    "colors": ["Red", "Royal Blue", "Golden"],
+    "sizes": ["Free Size"],
+    "inStock": true,
+    "description": "Exquisite hand-woven Silk Katan Saree with intricate golden zari work, ideal for weddings and grand celebrations."
+  },
+  {
+    "id": 3,
+    "name": "Minimalist White Sneaker",
+    "category": "Shoes",
+    "price": 2490,
+    "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.3,
+    "colors": ["White", "Off-White"],
+    "sizes": ["40", "41", "42", "43"],
+    "inStock": true,
+    "description": "Clean, comfortable, and versatile white sneakers made with premium synthetic leather for everyday urban styling."
+  },
+  {
+    "id": 4,
+    "name": "Slim Fit Denim Shirt",
+    "category": "Shirt",
+    "price": 1850,
+    "image": "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.4,
+    "colors": ["Light Blue", "Dark Indigo"],
+    "sizes": ["S", "M", "L", "XL"],
+    "inStock": true,
+    "description": "Durable lightweight denim shirt featuring double chest pockets and contrast stitching for a rugged yet smart look."
+  },
+  {
+    "id": 5,
+    "name": "Floral Print Summer Kurti",
+    "category": "Kurti",
+    "price": 1650,
+    "image": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.6,
+    "colors": ["Yellow", "Peach"],
+    "sizes": ["S", "M", "L"],
+    "inStock": true,
+    "description": "Breathable georgette kurti with a vibrant floral pattern and comfortable fit, keeping you fresh all summer long."
+  },
+  {
+    "id": 6,
+    "name": "Premium Leather Wallet",
+    "category": "Accessories",
+    "price": 990,
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.7,
+    "colors": ["Brown", "Tan Black"],
+    "sizes": ["One Size"],
+    "inStock": true,
+    "description": "Handcrafted genuine leather bi-fold wallet featuring multiple card slots, coin pocket, and a sleek modern profile."
+  },
+  {
+    "id": 7,
+    "name": "Casual Crewneck T-Shirt",
+    "category": "T-Shirt",
+    "price": 590,
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.2,
+    "colors": ["Black", "Olive Green", "Maroon"],
+    "sizes": ["M", "L", "XL", "XXL"],
+    "inStock": true,
+    "description": "Ultra-soft 100% combed cotton t-shirt. Breathable fabric and tagless neck for ultimate daily comfort."
+  },
+  {
+    "id": 8,
+    "name": "Elegant Georgette Saree",
+    "category": "Saree",
+    "price": 2800,
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.5,
+    "colors": ["Lavender", "Blush Pink"],
+    "sizes": ["Free Size"],
+    "inStock": true,
+    "description": "Lightweight and easy to drape georgette saree with subtle sequin border work, elegant choice for evening parties."
+  },
+  {
+    "id": 9,
+    "name": "Modern Chino Pants",
+    "category": "Pants",
+    "price": 1590,
+    "image": "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.3,
+    "colors": ["Beige", "Olive", "Navy"],
+    "sizes": ["30", "32", "34", "36"],
+    "inStock": false,
+    "description": "Slim-fit stretch chino trousers crafted from premium cotton twill, offering absolute comfort from desk to dinner."
+  },
+  {
+    "id": 10,
+    "name": "Embroidery Kabli Set",
+    "category": "Panjabi",
+    "price": 3200,
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.9,
+    "colors": ["Deep Emerald", "Charcoal Black"],
+    "sizes": ["L", "XL", "XXL"],
+    "inStock": true,
+    "description": "Luxurious semi-fit Kabli set with subtle, high-end collar embroidery. Includes matching salwar."
+  }
+]
